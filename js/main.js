@@ -1,0 +1,82 @@
+$(document).ready(function(){
+    $(window).scroll(function(){
+        $('.header-bg').toggleClass('scrolled',$(this).scrollTop()>150);
+    })
+// for back to top button
+    $(window).scroll(function(){
+        if($(window).scrollTop()>100){
+            $(".back-to-top").show();
+        }
+        else{
+            $(".back-to-top").hide();
+        }
+    })
+//  for upcomming classes card
+    $('.upcomming-cards').owlCarousel({
+        loop:true,
+        margin:35,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+    })  
+    // for students testimonials   
+    $('.students-testi').owlCarousel({
+        loop:true,
+        margin:35,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });   
+    // for success story card
+    $('.success-card').owlCarousel({
+        loop:true,
+        margin:35,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:3
+            }
+        }
+    });   
+    // for clint boc cards
+    $('.clints').owlCarousel({
+        loop:true,
+        margin:35,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:5
+            }
+        }
+    });   
+});
